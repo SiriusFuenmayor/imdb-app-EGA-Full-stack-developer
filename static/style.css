@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: 'Orelega One', cursive;
+}
+
+label {
+  margin-left: 20px;
+}
+
+button {
+  background-color:	#0066CC; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 8px 8px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 45px;
+}
+
+.centered-content {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.centered-text {
+  text-align: center;
+  color:#0066CC;
+}
+
+.centered-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-element {
+  margin: 25px 0px 25px;  
+}
+
+.listItem {
+  margin: 25px 0px 25px;
+  list-style-type: none;
+  color:#505050;
+}
+
+.navigation-text {
+  color: blue;
+  cursor: pointer;
+  font-size: large;
+}

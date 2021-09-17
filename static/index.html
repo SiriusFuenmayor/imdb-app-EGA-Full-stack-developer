@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="Sirius Fuenmayor">
+
+    <title>Fetch json example</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="centered-content">
+      <!------------>
+      <!-- Header -->
+      <!------------>
+      <h1 class="centered-text">Search movies in the IMDb</h1>
+      <!--------------------------------->
+      <!-- Search bar and filters form -->
+      <!--------------------------------->    
+      <form id="search_form"> 
+        <!-- Search input  -->
+        <input type="text" required id='title' placeholder="Search by title..." onchange="setTitle()" />
+        <hr style="margin-top:30px"/>
+        <!-- Genre type select -->
+        <div class="form-element">
+          <label for="genre">Genre: </label>
+          <select name="genre" id="genre" onchange="setGenre()">
+            <option value="any" selected>Any</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Drama">Drama</option>
+            <option value="Romance">Romance</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Western">Western</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Biography">Biography</option>
+            <option value="Family">Family</option>
+            <option value="Horror">Horror</option>
+            <option value="History">History</option>
+            <option value="Crime">Crime</option>
+          </select> 
+          <!-- Synonyms select -->
+          <label for="runtime">Runtime: </label>
+          <select name="runtime" id="runtime_" onchange="setRuntime()">
+            <option value="any" selected>Any</option>
+            <option value="0-60">less than 60 min</option>
+            <option value="60-90">60-90 min</option>
+            <option value="90-120">90-120 min</option>
+            <option value="120-150">120-150 min</option>
+            <option value="150-180">150-180 min</option>
+            <option value="210-240">210-240 min</option>
+            <option value="240-10000">greater than 240 min</option>
+          </select>
+          <br>
+          <br>
+          <!-- Sort by select -->  
+          <label for="sortField">Sort by: </label>
+          <select name="sort_field" id="sort_field" onchange="setSortField()">  
+            <option value="primaryTitle">Title</option>
+            <option value="averageRating">Rating</option>
+            <option value="startYear">Year</option>
+            <option value="runtimeMinutes">Runtime</option>
+          </select>
+          <!-- Sort order select -->
+          <label for="sortingOrder">Sorting order: </label> 
+          <select name="sorting_order" id="sorting_order" onchange="setSortingOrder()">  
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>      
+        </div>
+        <!-- Submit button (call search method) -->
+        <div class="centered-item">
+          <button type="submit">Search</button>          
+        </div> 
+        <hr style="margin-top:10px"/>
+      </form>
+      <br>
+      <br>
+      <!----------------->    
+      <!-- Result List -->
+      <!----------------->
+      <ul>
+      </ul>
+      <p id='navigation_controls'></p>
+    </div>
+  </body>
+
+  <script type="text/javascript"  src="main.js"></script>
+</html>
